@@ -34,7 +34,7 @@ console.log(arr2[0]); 		// 2
 - find()：用于找出第一个符合条件的数组成员，如果没有符合条件的成员，则返回 undefined
 - findIndex()：返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回 -1
 
-#### 2.4、includes
+#### 2.4、includes（ES7）
 
 - Array.prototype.includes()：返回一个布尔值，表示某个数组是否包含给定的值
 - 第二个参数表示搜索的起始位置，默认为 0
@@ -78,3 +78,46 @@ for (let [index, val] of ['a', 'b'].entries()) {
 - 不可以当作构造函数，也就是说，不可以使用 new 命令，否则会抛出一个错误
 - 不可以使用 arguments 对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替
 - 不可以使用 yield 命令，因此箭头函数不能用作 Generator 函数。
+
+### 4、Iterator 和 for...of 循环
+
+Iterator 是一种接口，为各种不同的数据结构提供统一的访问机制，**任何数据结构只要部署 Iterator 接口，就可以完成遍历操作**
+
+#### 4.1、Iterator的作用：
+
+- 为各种数据结构，提供一个统一的、简便的访问接口；
+- 使得数据结构的成员能够按某种次序排列
+- ES6创造了一种新的遍历命令for...of循环，Iterator接口主要供for...of消费。
+
+#### 4.2、原生具备 iterator 接口的数据(可用for of遍历)
+
+- Array
+- Set
+- Map
+- String
+- 函数的 arguments 对象
+- NodeList 对象
+
+#### 4.3、几种遍历方式比较
+
+- for of 循环不仅支持数组、大多数伪数组对象，也支持字符串遍历，此外还支持 Map 和 Set 对象遍历。
+- for in 循环可以遍历字符串、对象、数组，不能遍历 Set/Map
+- forEach 循环不能遍历字符串、对象，可以遍历 Set/Map
+
+### 5、rest 参数
+
+### 6、展开运算符
+
+### 7、解构赋值
+
+### 8、模板字符串
+
+### 9、Class（类）
+
+### 10、Promise
+
+### 11、ES6模块化
+
+- export：用于规定模块的对外接口
+- import ：用于输入其他模块提供的功能
+- export default
