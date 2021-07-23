@@ -54,7 +54,6 @@ console.log(Math.pow(2, 10)) // 输出1024
 该方法的引入目的，主要是为了解决 Object.assign() 无法正确拷贝 get 属性和 set 属性的问题
 
 
-
 ### 三、ES9
 
 #### 1、for await of
@@ -189,23 +188,7 @@ const result = Object.fromEntries(entries); // { x: 23, y: 24 }
 - trimStart() 方法从字符串的开头删除空格，trimLeft()是此方法的别名
 - trimEnd() 方法从一个字符串的右端移除空白字符，trimRight 是 trimEnd 的别名
 
-#### 5、String.prototype.matchAll
-
-> 正则表达式在字符串里面有多个匹配，可以一次性取出所有匹配
-
-```js
-function collectGroup1 (regExp, str) {
-  let results = []
-  for (const match of str.matchAll(regExp)) {
-    results.push(match[1])
-  }
-  return results
-}
-console.log(collectGroup1(/"([^"]*)"/g, `"foo" and "bar" and "baz"`))
-// ["foo", "bar", "baz"]
-```
-
-#### 6、try…catch
+#### 5、try…catch
 
 > catch 后的 err 可以省略
 
@@ -217,23 +200,7 @@ try {
 }
 ```
 
-#### 7、BigInt
-
-> 新的数据类型 BigInt（大整数），BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示
-
-- 创建 BigInt 类型的值也非常简单，只需要在数字后面加上 n 即可
-- 也可以使用全局方法 BigInt(value) 转化，入参 value 为数字或数字字符串
-
-```js
-const aNumber = 111;
-const aBigInt = BigInt(aNumber);
-aBigInt === 111n // true
-typeof aBigInt === 'bigint' // true
-typeof 111  // "number"
-typeof 111n // "bigint"
-```
-
-#### 8、Symbol.prototype.description
+#### 6、Symbol.prototype.description
 
 Symbol 的描述只被存储在内部的 [[Description]]，没有直接对外暴露，只有调用 Symbol 的 toString() 时才可以读取这个属性：
 
@@ -243,7 +210,7 @@ Symbol('').description;      // ""
 Symbol().description;        // undefined
 ```
 
-#### 9、Function.prototype.toString()
+#### 7、Function.prototype.toString()
 
 之前执行这个方法时，得到的字符串是去空白符号的。而现在，得到的字符串呈现出原本源码的样子：
 
