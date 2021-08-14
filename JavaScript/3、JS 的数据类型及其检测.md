@@ -59,7 +59,7 @@ undefined instanceof Undefined	// Undefined is not defined
 
 > **Object.prototype.toString.call() 最准确最常用的方式**
 
-说明：Object 上的 toString 它的作用是返回当前方法执行的主体（方法中的this）所属类的详细信息即"[object Object]"，其中第一个 object 代表当前实例是对象数据类型的(这个是固定死的)，**第二个 Object代表的是 *this* 所属的类是 Object**
+说明：Object 上的 toString 它的作用是返回当前方法执行的主体（方法中的 this）所属类的详细信息即"[object Object]"，其中第一个 object 代表当前实例是对象数据类型的(这个是固定死的)，**第二个 Object 代表的是 *this* 所属的类是 Object**
 
 ```js
 Object.prototype.toString.call('') ;   // [object String]
@@ -72,8 +72,8 @@ Object.prototype.toString.call(new Date()) ; 	// [object Date]
 Object.prototype.toString.call([]) ; // [object Array]
 Object.prototype.toString.call(new RegExp()) ; 	// [object RegExp]
 Object.prototype.toString.call(new Error()) ; 	// [object Error]
-Object.prototype.toString.call(document) ; 	// [object HTMLDocument]
-Object.prototype.toString.call(window) ; 	// [object global] window 是全局对象 global 的引用
+Object.prototype.toString.call(document) ; 		// [object HTMLDocument]
+Object.prototype.toString.call(window) ; 		// [object global] window 是全局对象 global 的引用
 ```
 
 
