@@ -2,7 +2,7 @@
 
 #### 1.1、toString() 方法
 
-- 调用被转换数据类型的 `toString()` 方法,该方法不会影响到原变量，它会将转换的结果返回，**但是注意：null 和 undefined 这两个值没有 toString，如果调用他们的方法，会报错**
+- 调用被转换数据类型的 `toString()` 方法，该方法不会影响到原变量，它会将转换的结果返回。**但是注意：null 和 undefined 这两个值没有 toString，如果调用他们的方法，会报错**
 - 采用 Number 类型的 `toString()` 方法的基模式，可以用不同的基输出数字，例如二进制的基是 2，八进制的基是 8，十六进制的基是 16
 
 ```js
@@ -14,7 +14,7 @@ alert(iNum.toString(16));       // 输出 "A"
 
 #### 1.2、String() 函数
 
-- 使用 `String()` 函数做强制类型转换时，对于 Number 和 Boolean 实际上就是调用的 `toString()` 方法,
+- 使用 `String()` 函数做强制类型转换时，对于 Number 和 Boolean 实际上就是调用的 `toString()` 方法
   但是对于 null 和 undefined，就不会调用 toString() 方法，它会将 null 直接转换为 "null" ，将 undefined 直接转换为 "undefined"
 
 ```js
