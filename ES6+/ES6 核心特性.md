@@ -83,13 +83,13 @@ for (let [index, val] of ['a', 'b'].entries()) {
 
 Iterator 是一种接口，为各种不同的数据结构提供统一的访问机制，**任何数据结构只要部署 Iterator 接口，就可以完成遍历操作**
 
-#### 4.1、Iterator的作用：
+#### 4.1、Iterator 的作用：
 
 - 为各种数据结构，提供一个统一的、简便的访问接口；
 - 使得数据结构的成员能够按某种次序排列
-- ES6创造了一种新的遍历命令for...of循环，Iterator接口主要供for...of消费。
+- ES6 创造了一种新的遍历命令 for...of 循环，Iterator 接口主要供 for...of 消费。
 
-#### 4.2、原生具备 iterator 接口的数据(可用for of遍历)
+#### 4.2、原生具备 iterator 接口的数据（可用 for of 遍历）
 
 - Array
 - Set
