@@ -69,13 +69,13 @@ console.log(Math.pow(2, 10)) // 输出1024
 
 #### 3、Promise.prototype.finally()
 
-> 返回一个 Promise，在 promise 执行结束时，无论结果是 fulfilled 或者是 rejected，在执行 then() 和catch() 后，都会执行 finally 指定的回调函数
+> 返回一个 Promise，在 promise 执行结束时，无论结果是 fulfilled 或者是 rejected，在执行 then() 和 catch() 后，都会执行 finally 指定的回调函数
 
 #### 4、新的正则表达式特性
 
 ##### 4.1、s(dotAll)flag
 
-换行符(\n)或回车符(\r)，可以通过ES9的s(dotAll)flag，在原正则表达式基础上添加s表示：
+换行符（\n）或回车符（\r），可以通过 ES9 的 `s(dotAll)flag`，在原正则表达式基础上添加 s 表示：
 
 ```js
 console.log(/foo.bar/.test('foo\nbar'))  // false
@@ -115,13 +115,13 @@ console.log(test.match(/(?<=world\s)hello/))
 // ["hello", index: 6, input: "world hello", groups: undefined]
 ```
 
-**(?<…)是后行断言的符号，(?..)是先行断言的符号**，然后结合 =(等于)、!(不等)、\1(捕获匹配)
+**(?<…) 是后行断言的符号，(?..) 是先行断言的符号**，然后结合 =(等于)、!(不等)、\1(捕获匹配)
 
-##### 4.4、Unicode属性转义
+##### 4.4、Unicode 属性转义
 
 \p{...} 和 \P{...} 允许正则表达式匹配符合 Unicode 某种属性的所有字符
 
-- 如：\p{Number}来匹配所有的Unicode数字（小写 p）
+- 如：\p{Number} 来匹配所有的 Unicode 数字（小写 p）
 
 ```js
 const str = '㉛';
@@ -129,7 +129,7 @@ console.log(/\d/u.test(str));    // → false
 console.log(/\p{Number}/u.test(str));     // → true
 ```
 
-- 如：\p{Alphabetic}来匹配所有的Unicode单词字符（小写 p）
+- 如：\p{Alphabetic} 来匹配所有的 Unicode 单词字符（小写 p）
 
 ```js
 const str = 'ض';
@@ -176,7 +176,7 @@ console.log(arr.flatMap(item => [item * 2])) 	// [2, 4, 6]
 Object.fromEntries 这个新的 API 实现了与 Object.entries 相反的操作
 
 ```js
-const object = { x: 23, y:24 };
+const object = { x: 23, y: 24 };
 const entries = Object.entries(object); 	// [['x', 23], ['y', 24]]
 const result = Object.fromEntries(entries); // { x: 23, y: 24 }
 ```
@@ -185,7 +185,7 @@ const result = Object.fromEntries(entries); // { x: 23, y: 24 }
 
 > 移除开头和结尾的空格
 
-- trimStart() 方法从字符串的开头删除空格，trimLeft()是此方法的别名
+- trimStart() 方法从字符串的开头删除空格，trimLeft() 是 trimStart 的别名
 - trimEnd() 方法从一个字符串的右端移除空白字符，trimRight 是 trimEnd 的别名
 
 #### 5、try…catch
