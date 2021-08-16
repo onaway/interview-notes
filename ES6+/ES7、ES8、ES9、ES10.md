@@ -41,7 +41,7 @@ console.log(Math.pow(2, 10)) // 输出1024
 
 - `Object.entries()` 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组
 
-#### 3、padding
+#### 3、padStart + padEnd
 
 - **str.padStart(targetLength, string)**：使用指定字符串填充到目标字符串前面，使其达到目标长度；
 
